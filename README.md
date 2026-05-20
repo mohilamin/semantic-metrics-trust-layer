@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This project simulates one of the most common and expensive enterprise data problems: different teams calculating the same metric differently.
+This project demonstrates the analytics engineering and AI data governance mindset: do not just calculate metrics — govern their meaning, prove their lineage, and certify them for safe consumption.
 
 A basic analytics project asks: “Can we build a dashboard?”
 
