@@ -1,0 +1,40 @@
+tables:
+  customers:
+    required_columns: [customer_id, account_id, region, channel, status, created_at, updated_at]
+    unique_key: customer_id
+  accounts:
+    required_columns: [account_id, account_name, region, industry, segment, created_at, updated_at]
+    unique_key: account_id
+  orders:
+    required_columns: [order_id, customer_id, product_id, order_date, order_amount, status, currency, channel]
+    unique_key: order_id
+  invoices:
+    required_columns: [invoice_id, account_id, customer_id, invoice_date, invoice_amount, status, currency]
+    unique_key: invoice_id
+  payments:
+    required_columns: [payment_id, invoice_id, customer_id, payment_date, payment_amount, status, currency]
+    unique_key: payment_id
+  refunds:
+    required_columns: [refund_id, payment_id, customer_id, refund_date, refund_amount, reason]
+    unique_key: refund_id
+  products:
+    required_columns: [product_id, product_name, category, gross_margin_pct, active_flag]
+    unique_key: product_id
+  subscriptions:
+    required_columns: [subscription_id, customer_id, start_date, end_date, status, monthly_recurring_revenue]
+    unique_key: subscription_id
+  support_tickets:
+    required_columns: [ticket_id, customer_id, created_at, first_response_at, resolved_at, priority, status]
+    unique_key: ticket_id
+  marketing_campaigns:
+    required_columns: [campaign_id, channel, campaign_start, campaign_end, spend, conversions]
+    unique_key: campaign_id
+  web_events:
+    required_columns: [event_id, customer_id, event_timestamp, event_type, product_id]
+    unique_key: event_id
+  sales_opportunities:
+    required_columns: [opportunity_id, account_id, created_at, close_date, stage, amount]
+    unique_key: opportunity_id
+defaults:
+  allowed_null_rate: 0.02
+  freshness_sla_hours: 48

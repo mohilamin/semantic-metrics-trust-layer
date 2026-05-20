@@ -1,0 +1,459 @@
+{
+  "summary": {
+    "total_checks": 45,
+    "passed_checks": 45,
+    "pass_rate": 100.0
+  },
+  "checks": [
+    {
+      "metric_id": "M001",
+      "metric_name": "net_revenue",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M001",
+      "metric_name": "net_revenue",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M001",
+      "metric_name": "net_revenue",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M002",
+      "metric_name": "gross_revenue",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M002",
+      "metric_name": "gross_revenue",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M002",
+      "metric_name": "gross_revenue",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M003",
+      "metric_name": "active_customers",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M003",
+      "metric_name": "active_customers",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M003",
+      "metric_name": "active_customers",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M004",
+      "metric_name": "churn_rate",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M004",
+      "metric_name": "churn_rate",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M004",
+      "metric_name": "churn_rate",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M005",
+      "metric_name": "customer_retention_rate",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M005",
+      "metric_name": "customer_retention_rate",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M005",
+      "metric_name": "customer_retention_rate",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M006",
+      "metric_name": "average_order_value",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M006",
+      "metric_name": "average_order_value",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M006",
+      "metric_name": "average_order_value",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M007",
+      "metric_name": "refund_rate",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M007",
+      "metric_name": "refund_rate",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M007",
+      "metric_name": "refund_rate",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M008",
+      "metric_name": "payment_success_rate",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M008",
+      "metric_name": "payment_success_rate",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M008",
+      "metric_name": "payment_success_rate",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M009",
+      "metric_name": "subscription_mrr",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M009",
+      "metric_name": "subscription_mrr",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M009",
+      "metric_name": "subscription_mrr",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M010",
+      "metric_name": "customer_lifetime_value_proxy",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M010",
+      "metric_name": "customer_lifetime_value_proxy",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M010",
+      "metric_name": "customer_lifetime_value_proxy",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M011",
+      "metric_name": "support_sla_compliance_rate",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M011",
+      "metric_name": "support_sla_compliance_rate",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M011",
+      "metric_name": "support_sla_compliance_rate",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M012",
+      "metric_name": "campaign_conversion_rate",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M012",
+      "metric_name": "campaign_conversion_rate",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M012",
+      "metric_name": "campaign_conversion_rate",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M013",
+      "metric_name": "sales_pipeline_value",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M013",
+      "metric_name": "sales_pipeline_value",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M013",
+      "metric_name": "sales_pipeline_value",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M014",
+      "metric_name": "invoice_collection_rate",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M014",
+      "metric_name": "invoice_collection_rate",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M014",
+      "metric_name": "invoice_collection_rate",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M015",
+      "metric_name": "data_product_adoption_rate",
+      "check_type": "required_fields",
+      "status": "pass",
+      "severity": "critical",
+      "expected_value": "metric_id,metric_name,business_definition,formula,owner,domain,grain,dimensions,source_tables,freshness_sla_hours,certification_status,version,approval_status,allowed_consumers,ai_agent_allowed_flag",
+      "actual_value": "complete",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M015",
+      "metric_name": "data_product_adoption_rate",
+      "check_type": "approval_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "draft,under_review,approved,deprecated,rejected",
+      "actual_value": "approved",
+      "recommended_action": "No action."
+    },
+    {
+      "metric_id": "M015",
+      "metric_name": "data_product_adoption_rate",
+      "check_type": "certification_status",
+      "status": "pass",
+      "severity": "high",
+      "expected_value": "certified",
+      "actual_value": "certified",
+      "recommended_action": "No action."
+    }
+  ]
+}

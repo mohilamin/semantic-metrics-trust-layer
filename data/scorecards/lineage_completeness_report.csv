@@ -1,0 +1,16 @@
+metric_id,metric_name,lineage_completeness_score,has_sources,has_consumers
+M001,net_revenue,100.0,True,True
+M002,gross_revenue,100.0,True,True
+M003,active_customers,100.0,True,True
+M004,churn_rate,100.0,True,True
+M005,customer_retention_rate,100.0,True,True
+M006,average_order_value,100.0,True,True
+M007,refund_rate,100.0,True,True
+M008,payment_success_rate,100.0,True,True
+M009,subscription_mrr,100.0,True,True
+M010,customer_lifetime_value_proxy,100.0,True,True
+M011,support_sla_compliance_rate,100.0,True,True
+M012,campaign_conversion_rate,100.0,True,True
+M013,sales_pipeline_value,100.0,True,True
+M014,invoice_collection_rate,100.0,True,True
+M015,data_product_adoption_rate,100.0,True,True

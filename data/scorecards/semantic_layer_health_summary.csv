@@ -1,0 +1,2 @@
+total_metrics,average_trust_score,trusted_metrics,ai_safe_metrics,data_contract_pass_rate,metric_contract_pass_rate,metric_conflicts
+15,98.34,15,12,97.92,100.0,4

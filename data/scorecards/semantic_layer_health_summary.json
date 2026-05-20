@@ -1,0 +1,9 @@
+{
+  "total_metrics": 15,
+  "average_trust_score": 98.34,
+  "trusted_metrics": 15,
+  "ai_safe_metrics": 12,
+  "data_contract_pass_rate": 97.92,
+  "metric_contract_pass_rate": 100.0,
+  "metric_conflicts": 4
+}

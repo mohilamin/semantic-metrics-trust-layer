@@ -1,0 +1,3 @@
+from src.metrics_engine.drift_detector import detect_metric_drift
+
+write_metric_drift_report = detect_metric_drift

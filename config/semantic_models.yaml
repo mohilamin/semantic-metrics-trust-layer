@@ -1,0 +1,91 @@
+models:
+  customer:
+    entity: customer_id
+    primary_key: customer_id
+    dimensions: [region, channel, status]
+    measures: [customer_count]
+    relationships: [accounts, orders, payments, subscriptions, web_events, support_tickets]
+    valid_joins: [account_id, customer_id]
+    allowed_grains: [customer, account, region, month]
+    owner: Customer Analytics
+    sensitive_fields: []
+  account:
+    entity: account_id
+    primary_key: account_id
+    dimensions: [region, industry, segment]
+    measures: [account_count]
+    relationships: [customers, invoices, sales_opportunities]
+    valid_joins: [account_id]
+    allowed_grains: [account, region, month]
+    owner: Sales Operations
+    sensitive_fields: []
+  order:
+    entity: order_id
+    primary_key: order_id
+    dimensions: [channel, status, currency]
+    measures: [order_amount, order_count]
+    relationships: [customers, products]
+    valid_joins: [customer_id, product_id]
+    allowed_grains: [order, customer, product, month]
+    owner: Product Analytics
+    sensitive_fields: []
+  invoice:
+    entity: invoice_id
+    primary_key: invoice_id
+    dimensions: [status, currency]
+    measures: [invoice_amount]
+    relationships: [accounts, customers, payments]
+    valid_joins: [account_id, customer_id, invoice_id]
+    allowed_grains: [invoice, customer, account, month]
+    owner: Finance Analytics
+    sensitive_fields: []
+  payment:
+    entity: payment_id
+    primary_key: payment_id
+    dimensions: [status, currency]
+    measures: [payment_amount]
+    relationships: [invoices, customers, refunds]
+    valid_joins: [payment_id, invoice_id, customer_id]
+    allowed_grains: [payment, customer, month]
+    owner: Finance Analytics
+    sensitive_fields: []
+  subscription:
+    entity: subscription_id
+    primary_key: subscription_id
+    dimensions: [status]
+    measures: [monthly_recurring_revenue]
+    relationships: [customers]
+    valid_joins: [customer_id]
+    allowed_grains: [subscription, customer, month]
+    owner: Product Analytics
+    sensitive_fields: []
+  support:
+    entity: ticket_id
+    primary_key: ticket_id
+    dimensions: [priority, status]
+    measures: [ticket_count, response_minutes, resolution_minutes]
+    relationships: [customers]
+    valid_joins: [customer_id]
+    allowed_grains: [ticket, customer, month]
+    owner: Support Operations
+    sensitive_fields: []
+  marketing:
+    entity: campaign_id
+    primary_key: campaign_id
+    dimensions: [channel]
+    measures: [spend, conversions]
+    relationships: [web_events]
+    valid_joins: [campaign_id]
+    allowed_grains: [campaign, channel, month]
+    owner: Marketing Analytics
+    sensitive_fields: []
+  sales:
+    entity: opportunity_id
+    primary_key: opportunity_id
+    dimensions: [stage]
+    measures: [amount]
+    relationships: [accounts]
+    valid_joins: [account_id]
+    allowed_grains: [opportunity, account, month]
+    owner: Sales Operations
+    sensitive_fields: []

@@ -1,0 +1,402 @@
+{
+  "metrics": [
+    {
+      "metric_id": "M001",
+      "metric_name": "net_revenue",
+      "source_tables": [
+        "payments",
+        "refunds",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "sum(successful_payments) - sum(refunds)"
+      ],
+      "downstream_consumers": [
+        "executive_dashboard",
+        "finance_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "executive_dashboard",
+        "finance_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Finance Analytics",
+      "impact_level": "high"
+    },
+    {
+      "metric_id": "M002",
+      "metric_name": "gross_revenue",
+      "source_tables": [
+        "payments",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "sum(successful_payments)"
+      ],
+      "downstream_consumers": [
+        "executive_dashboard",
+        "finance_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "executive_dashboard",
+        "finance_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Finance Analytics",
+      "impact_level": "high"
+    },
+    {
+      "metric_id": "M003",
+      "metric_name": "active_customers",
+      "source_tables": [
+        "payments",
+        "web_events",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "count_distinct(active_customers_30d)"
+      ],
+      "downstream_consumers": [
+        "executive_dashboard",
+        "product_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "executive_dashboard",
+        "product_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Product Analytics",
+      "impact_level": "medium"
+    },
+    {
+      "metric_id": "M004",
+      "metric_name": "churn_rate",
+      "source_tables": [
+        "subscriptions",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "churned_subscriptions / active_subscriptions"
+      ],
+      "downstream_consumers": [
+        "executive_dashboard",
+        "product_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "executive_dashboard",
+        "product_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Product Analytics",
+      "impact_level": "medium"
+    },
+    {
+      "metric_id": "M005",
+      "metric_name": "customer_retention_rate",
+      "source_tables": [
+        "subscriptions"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "1 - churn_rate"
+      ],
+      "downstream_consumers": [
+        "executive_dashboard",
+        "product_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "executive_dashboard",
+        "product_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Product Analytics",
+      "impact_level": "medium"
+    },
+    {
+      "metric_id": "M006",
+      "metric_name": "average_order_value",
+      "source_tables": [
+        "orders",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "sum(order_amount) / count(orders)"
+      ],
+      "downstream_consumers": [
+        "product_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "product_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Product Analytics",
+      "impact_level": "medium"
+    },
+    {
+      "metric_id": "M007",
+      "metric_name": "refund_rate",
+      "source_tables": [
+        "refunds",
+        "payments",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "sum(refunds) / sum(successful_payments)"
+      ],
+      "downstream_consumers": [
+        "finance_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "finance_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Finance Analytics",
+      "impact_level": "high"
+    },
+    {
+      "metric_id": "M008",
+      "metric_name": "payment_success_rate",
+      "source_tables": [
+        "payments",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "succeeded_payments / attempted_payments"
+      ],
+      "downstream_consumers": [
+        "operations_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "operations_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Payments Analytics",
+      "impact_level": "high"
+    },
+    {
+      "metric_id": "M009",
+      "metric_name": "subscription_mrr",
+      "source_tables": [
+        "subscriptions",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "sum(active_subscription_mrr)"
+      ],
+      "downstream_consumers": [
+        "executive_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "executive_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Product Analytics",
+      "impact_level": "medium"
+    },
+    {
+      "metric_id": "M010",
+      "metric_name": "customer_lifetime_value_proxy",
+      "source_tables": [
+        "payments",
+        "refunds",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "net_revenue / active_customers"
+      ],
+      "downstream_consumers": [
+        "executive_dashboard"
+      ],
+      "dashboards": [
+        "executive_dashboard"
+      ],
+      "ai_agents": [],
+      "owner": "Finance Analytics",
+      "impact_level": "high"
+    },
+    {
+      "metric_id": "M011",
+      "metric_name": "support_sla_compliance_rate",
+      "source_tables": [
+        "support_tickets",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "tickets_first_response_within_sla / resolved_tickets"
+      ],
+      "downstream_consumers": [
+        "operations_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "operations_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Support Operations",
+      "impact_level": "high"
+    },
+    {
+      "metric_id": "M012",
+      "metric_name": "campaign_conversion_rate",
+      "source_tables": [
+        "marketing_campaigns",
+        "web_events"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "conversions / campaign_events"
+      ],
+      "downstream_consumers": [
+        "marketing_dashboard"
+      ],
+      "dashboards": [
+        "marketing_dashboard"
+      ],
+      "ai_agents": [],
+      "owner": "Marketing Analytics",
+      "impact_level": "medium"
+    },
+    {
+      "metric_id": "M013",
+      "metric_name": "sales_pipeline_value",
+      "source_tables": [
+        "sales_opportunities",
+        "accounts"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "sum(open_opportunity_amount)"
+      ],
+      "downstream_consumers": [
+        "sales_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "sales_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Sales Operations",
+      "impact_level": "medium"
+    },
+    {
+      "metric_id": "M014",
+      "metric_name": "invoice_collection_rate",
+      "source_tables": [
+        "invoices",
+        "payments",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "paid_invoice_amount / issued_invoice_amount"
+      ],
+      "downstream_consumers": [
+        "finance_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "finance_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Finance Analytics",
+      "impact_level": "high"
+    },
+    {
+      "metric_id": "M015",
+      "metric_name": "data_product_adoption_rate",
+      "source_tables": [
+        "web_events",
+        "customers"
+      ],
+      "source_columns": [
+        "synthetic business columns"
+      ],
+      "transformations": [
+        "data_product_users / active_customers"
+      ],
+      "downstream_consumers": [
+        "data_platform_dashboard",
+        "ai_agent"
+      ],
+      "dashboards": [
+        "data_platform_dashboard"
+      ],
+      "ai_agents": [
+        "enterprise_metric_agent"
+      ],
+      "owner": "Data Platform",
+      "impact_level": "medium"
+    }
+  ]
+}

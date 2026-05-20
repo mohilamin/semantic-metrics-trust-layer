@@ -1,0 +1,3 @@
+from src.trust.ai_readiness_score import calculate_ai_readiness
+
+write_ai_readiness_report = calculate_ai_readiness

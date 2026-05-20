@@ -1,0 +1,16 @@
+metric_id,metric_name,owner,domain,trust_score,data_contract_pass_rate,metric_contract_pass_rate,conflict_count,high_drift_count,certification_status,trust_tier
+M001,net_revenue,Finance Analytics,finance,90.29,97.92,100.0,2,1,certified,trusted
+M002,gross_revenue,Finance Analytics,finance,99.69,97.92,100.0,0,0,certified,trusted
+M003,active_customers,Product Analytics,product,96.99,97.92,100.0,1,0,certified,trusted
+M004,churn_rate,Product Analytics,product,96.99,97.92,100.0,1,0,certified,trusted
+M005,customer_retention_rate,Product Analytics,product,99.69,97.92,100.0,0,0,certified,trusted
+M006,average_order_value,Product Analytics,commerce,99.69,97.92,100.0,0,0,certified,trusted
+M007,refund_rate,Finance Analytics,finance,99.69,97.92,100.0,0,0,certified,trusted
+M008,payment_success_rate,Payments Analytics,finance,96.99,97.92,100.0,1,0,certified,trusted
+M009,subscription_mrr,Product Analytics,product,99.69,97.92,100.0,0,0,certified,trusted
+M010,customer_lifetime_value_proxy,Finance Analytics,finance,99.69,97.92,100.0,0,0,certified,trusted
+M011,support_sla_compliance_rate,Support Operations,operations,96.99,97.92,100.0,1,0,certified,trusted
+M012,campaign_conversion_rate,Marketing Analytics,marketing,99.69,97.92,100.0,0,0,certified,trusted
+M013,sales_pipeline_value,Sales Operations,sales,99.69,97.92,100.0,0,0,certified,trusted
+M014,invoice_collection_rate,Finance Analytics,finance,99.69,97.92,100.0,0,0,certified,trusted
+M015,data_product_adoption_rate,Data Platform,data_platform,99.69,97.92,100.0,0,0,certified,trusted

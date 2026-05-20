@@ -1,0 +1,16 @@
+run_id,metric_id,metric_name,metric_value,grain,certification_status,calculated_at
+RUN-20260520142611,M001,net_revenue,15896996.91,month,certified,2026-05-20T14:26:11.626530+00:00
+RUN-20260520142611,M002,gross_revenue,16444868.22,month,certified,2026-05-20T14:26:11.626538+00:00
+RUN-20260520142611,M003,active_customers,5000.0,day,certified,2026-05-20T14:26:11.626541+00:00
+RUN-20260520142611,M004,churn_rate,0.2255,month,certified,2026-05-20T14:26:11.626543+00:00
+RUN-20260520142611,M005,customer_retention_rate,0.7745,month,certified,2026-05-20T14:26:11.626545+00:00
+RUN-20260520142611,M006,average_order_value,308.2981,month,certified,2026-05-20T14:26:11.626546+00:00
+RUN-20260520142611,M007,refund_rate,0.0333,month,certified,2026-05-20T14:26:11.626548+00:00
+RUN-20260520142611,M008,payment_success_rate,0.8774,day,certified,2026-05-20T14:26:11.626550+00:00
+RUN-20260520142611,M009,subscription_mrr,1037304.9,month,certified,2026-05-20T14:26:11.626552+00:00
+RUN-20260520142611,M010,customer_lifetime_value_proxy,3179.3994,month,certified,2026-05-20T14:26:11.626553+00:00
+RUN-20260520142611,M011,support_sla_compliance_rate,0.6664,day,certified,2026-05-20T14:26:11.626555+00:00
+RUN-20260520142611,M012,campaign_conversion_rate,2.9602,campaign,certified,2026-05-20T14:26:11.626557+00:00
+RUN-20260520142611,M013,sales_pipeline_value,189797399.13,month,certified,2026-05-20T14:26:11.626559+00:00
+RUN-20260520142611,M014,invoice_collection_rate,0.8953,month,certified,2026-05-20T14:26:11.626560+00:00
+RUN-20260520142611,M015,data_product_adoption_rate,0.808,month,certified,2026-05-20T14:26:11.626562+00:00

@@ -1,0 +1,19 @@
+required_fields:
+  - metric_id
+  - metric_name
+  - business_definition
+  - formula
+  - owner
+  - domain
+  - grain
+  - dimensions
+  - source_tables
+  - freshness_sla_hours
+  - certification_status
+  - version
+  - approval_status
+  - allowed_consumers
+  - ai_agent_allowed_flag
+allowed_certification_statuses: [certified, uncertified, deprecated]
+allowed_approval_statuses: [draft, under_review, approved, deprecated, rejected]
+allowed_grains: [day, month, quarter, campaign]

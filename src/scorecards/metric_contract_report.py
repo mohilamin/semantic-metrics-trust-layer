@@ -1,0 +1,3 @@
+from src.contracts.metric_contract_validator import validate_metric_contracts
+
+write_metric_contract_report = validate_metric_contracts

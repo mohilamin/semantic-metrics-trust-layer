@@ -1,0 +1,37 @@
+[
+  {
+    "metric_name": "net_revenue",
+    "conflicting_team": "Finance",
+    "definition": "Paid invoice revenue net of refunds."
+  },
+  {
+    "metric_name": "net_revenue",
+    "conflicting_team": "Sales",
+    "definition": "Closed-won opportunity amount."
+  },
+  {
+    "metric_name": "active_customers",
+    "conflicting_team": "Product",
+    "definition": "Customers with login activity."
+  },
+  {
+    "metric_name": "active_customers",
+    "conflicting_team": "Finance",
+    "definition": "Customers with paid invoices."
+  },
+  {
+    "metric_name": "churn_rate",
+    "conflicting_team": "Finance",
+    "definition": "Churned subscriptions divided by all customers."
+  },
+  {
+    "metric_name": "payment_success_rate",
+    "conflicting_team": "Payments",
+    "definition": "Succeeded payments excluding pending attempts."
+  },
+  {
+    "metric_name": "support_sla_compliance_rate",
+    "conflicting_team": "Operations",
+    "definition": "Resolution time SLA instead of first response SLA."
+  }
+]

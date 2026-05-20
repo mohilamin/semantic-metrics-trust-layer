@@ -1,0 +1,16 @@
+metric_id,metric_name,ai_readiness_score,ai_agent_allowed_flag,safe_for_ai_agent,failed_checks
+M001,net_revenue,81.82,True,False,"no_unresolved_conflicts,no_high_drift"
+M002,gross_revenue,100.0,True,True,
+M003,active_customers,90.91,True,True,no_unresolved_conflicts
+M004,churn_rate,90.91,True,True,no_unresolved_conflicts
+M005,customer_retention_rate,100.0,True,True,
+M006,average_order_value,100.0,True,True,
+M007,refund_rate,100.0,True,True,
+M008,payment_success_rate,90.91,True,True,no_unresolved_conflicts
+M009,subscription_mrr,100.0,True,True,
+M010,customer_lifetime_value_proxy,90.91,False,False,ai_agent_allowed
+M011,support_sla_compliance_rate,90.91,True,True,no_unresolved_conflicts
+M012,campaign_conversion_rate,90.91,False,False,ai_agent_allowed
+M013,sales_pipeline_value,100.0,True,True,
+M014,invoice_collection_rate,100.0,True,True,
+M015,data_product_adoption_rate,100.0,True,True,

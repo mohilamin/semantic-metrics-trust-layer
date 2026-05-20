@@ -1,0 +1,13 @@
+required_checks:
+  - certified_definition_exists
+  - owner_exists
+  - formula_documented
+  - lineage_exists
+  - freshness_sla_passed
+  - no_unresolved_conflicts
+  - no_high_drift
+  - ai_agent_allowed
+  - metric_contract_passes
+  - business_definition_exists
+  - examples_exist
+minimum_score_for_ai: 85

@@ -1,0 +1,10 @@
+reviewers:
+  finance: Finance Governance Lead
+  product: Product Analytics Lead
+  risk: Risk Data Owner
+  operations: Operations Analytics Lead
+default_status_flow:
+  - draft
+  - under_review
+  - approved
+  - deprecated

@@ -1,0 +1,301 @@
+metrics:
+  - metric_id: M001
+    metric_name: net_revenue
+    business_definition: Paid invoice revenue net of refunds.
+    formula: sum(successful_payments) - sum(refunds)
+    owner: Finance Analytics
+    domain: finance
+    grain: month
+    dimensions: [region, channel]
+    source_tables: [payments, refunds, customers]
+    filters: payment_status = succeeded
+    exclusions: refunded amounts, failed payments
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: CFO Data Steward
+    approval_status: approved
+    allowed_consumers: [executive_dashboard, finance_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What was net revenue this month?"]
+  - metric_id: M002
+    metric_name: gross_revenue
+    business_definition: Total succeeded payment amount before refunds.
+    formula: sum(successful_payments)
+    owner: Finance Analytics
+    domain: finance
+    grain: month
+    dimensions: [region, channel]
+    source_tables: [payments, customers]
+    filters: payment_status = succeeded
+    exclusions: failed payments
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: CFO Data Steward
+    approval_status: approved
+    allowed_consumers: [executive_dashboard, finance_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["Show gross revenue."]
+  - metric_id: M003
+    metric_name: active_customers
+    business_definition: Customers with a succeeded payment or web activity in the last 30 days.
+    formula: count_distinct(active_customers_30d)
+    owner: Product Analytics
+    domain: product
+    grain: day
+    dimensions: [region, channel]
+    source_tables: [payments, web_events, customers]
+    filters: activity within 30 days
+    exclusions: inactive customers
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: Product Data Steward
+    approval_status: approved
+    allowed_consumers: [executive_dashboard, product_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["How many active customers do we have?"]
+  - metric_id: M004
+    metric_name: churn_rate
+    business_definition: Share of active subscriptions that ended during the period.
+    formula: churned_subscriptions / active_subscriptions
+    owner: Product Analytics
+    domain: product
+    grain: month
+    dimensions: [region]
+    source_tables: [subscriptions, customers]
+    filters: subscription active or churned in period
+    exclusions: trials
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: Product Data Steward
+    approval_status: approved
+    allowed_consumers: [executive_dashboard, product_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What is churn rate?"]
+  - metric_id: M005
+    metric_name: customer_retention_rate
+    business_definition: One minus churn rate for active subscriptions.
+    formula: 1 - churn_rate
+    owner: Product Analytics
+    domain: product
+    grain: month
+    dimensions: [region]
+    source_tables: [subscriptions]
+    filters: active subscriptions
+    exclusions: trials
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: Product Data Steward
+    approval_status: approved
+    allowed_consumers: [executive_dashboard, product_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What is retention rate?"]
+  - metric_id: M006
+    metric_name: average_order_value
+    business_definition: Average completed order amount.
+    formula: sum(order_amount) / count(orders)
+    owner: Product Analytics
+    domain: commerce
+    grain: month
+    dimensions: [region, channel]
+    source_tables: [orders, customers]
+    filters: order_status = completed
+    exclusions: cancelled orders
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: Commerce Data Steward
+    approval_status: approved
+    allowed_consumers: [product_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What is AOV?"]
+  - metric_id: M007
+    metric_name: refund_rate
+    business_definition: Refund amount divided by succeeded payment amount.
+    formula: sum(refunds) / sum(successful_payments)
+    owner: Finance Analytics
+    domain: finance
+    grain: month
+    dimensions: [region]
+    source_tables: [refunds, payments, customers]
+    filters: payment_status = succeeded
+    exclusions: failed payments
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: CFO Data Steward
+    approval_status: approved
+    allowed_consumers: [finance_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What is refund rate?"]
+  - metric_id: M008
+    metric_name: payment_success_rate
+    business_definition: Succeeded payments divided by all attempted payments.
+    formula: succeeded_payments / attempted_payments
+    owner: Payments Analytics
+    domain: finance
+    grain: day
+    dimensions: [region, channel]
+    source_tables: [payments, customers]
+    filters: all payment attempts
+    exclusions: none
+    freshness_sla_hours: 12
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: Payments Data Steward
+    approval_status: approved
+    allowed_consumers: [operations_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What is payment success rate?"]
+  - metric_id: M009
+    metric_name: subscription_mrr
+    business_definition: Monthly recurring revenue for active subscriptions.
+    formula: sum(active_subscription_mrr)
+    owner: Product Analytics
+    domain: product
+    grain: month
+    dimensions: [region]
+    source_tables: [subscriptions, customers]
+    filters: subscription_status = active
+    exclusions: churned subscriptions
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: Product Data Steward
+    approval_status: approved
+    allowed_consumers: [executive_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What is subscription MRR?"]
+  - metric_id: M010
+    metric_name: customer_lifetime_value_proxy
+    business_definition: Net revenue divided by active customers.
+    formula: net_revenue / active_customers
+    owner: Finance Analytics
+    domain: finance
+    grain: month
+    dimensions: [region]
+    source_tables: [payments, refunds, customers]
+    filters: certified net revenue and active customers
+    exclusions: none
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: CFO Data Steward
+    approval_status: approved
+    allowed_consumers: [executive_dashboard]
+    ai_agent_allowed_flag: false
+    examples: ["What is CLV proxy?"]
+  - metric_id: M011
+    metric_name: support_sla_compliance_rate
+    business_definition: Support tickets with first response inside SLA divided by total resolved tickets.
+    formula: tickets_first_response_within_sla / resolved_tickets
+    owner: Support Operations
+    domain: operations
+    grain: day
+    dimensions: [priority, region]
+    source_tables: [support_tickets, customers]
+    filters: resolved tickets
+    exclusions: spam tickets
+    freshness_sla_hours: 12
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: Support Data Steward
+    approval_status: approved
+    allowed_consumers: [operations_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What is support SLA compliance?"]
+  - metric_id: M012
+    metric_name: campaign_conversion_rate
+    business_definition: Campaign conversions divided by campaign-attributed web events.
+    formula: conversions / campaign_events
+    owner: Marketing Analytics
+    domain: marketing
+    grain: campaign
+    dimensions: [channel]
+    source_tables: [marketing_campaigns, web_events]
+    filters: attributed events
+    exclusions: unattributed events
+    freshness_sla_hours: 48
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: Marketing Data Steward
+    approval_status: approved
+    allowed_consumers: [marketing_dashboard]
+    ai_agent_allowed_flag: false
+    examples: ["What is campaign conversion rate?"]
+  - metric_id: M013
+    metric_name: sales_pipeline_value
+    business_definition: Open sales opportunity amount.
+    formula: sum(open_opportunity_amount)
+    owner: Sales Operations
+    domain: sales
+    grain: month
+    dimensions: [region, stage]
+    source_tables: [sales_opportunities, accounts]
+    filters: stage not closed
+    exclusions: closed lost, closed won
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: Sales Data Steward
+    approval_status: approved
+    allowed_consumers: [sales_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What is pipeline value?"]
+  - metric_id: M014
+    metric_name: invoice_collection_rate
+    business_definition: Paid invoice amount divided by issued invoice amount.
+    formula: paid_invoice_amount / issued_invoice_amount
+    owner: Finance Analytics
+    domain: finance
+    grain: month
+    dimensions: [region]
+    source_tables: [invoices, payments, customers]
+    filters: issued invoices
+    exclusions: void invoices
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: CFO Data Steward
+    approval_status: approved
+    allowed_consumers: [finance_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What is collection rate?"]
+  - metric_id: M015
+    metric_name: data_product_adoption_rate
+    business_definition: Customers using analytics data products divided by active customers.
+    formula: data_product_users / active_customers
+    owner: Data Platform
+    domain: data_platform
+    grain: month
+    dimensions: [region]
+    source_tables: [web_events, customers]
+    filters: event_type = data_product_use
+    exclusions: internal test customers
+    freshness_sla_hours: 24
+    certification_status: certified
+    version: 1.0.0
+    effective_date: "2025-01-01"
+    approved_by: Data Governance Lead
+    approval_status: approved
+    allowed_consumers: [data_platform_dashboard, ai_agent]
+    ai_agent_allowed_flag: true
+    examples: ["What is data product adoption?"]
